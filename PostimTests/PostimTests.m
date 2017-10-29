@@ -7,6 +7,8 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "PostimManager.h"
+#import "CombustivesEnum.h"
 
 @interface PostimTests : XCTestCase
 
@@ -35,5 +37,19 @@
         // Put the code you want to measure the time of here.
     }];
 }
+
+- (void)testGasolina {
+    PostimManager *manager = [PostimManager new];
+    VantagemCombustivel vantagem = [manager verificarVantagemDaGasolina:1.5 EAlcool:3.5];
+    XCTAssertEqual(GASOLINA, vantagem);
+}
+
+
+- (void)testAlcool {
+    PostimManager *manager = [PostimManager new];
+    VantagemCombustivel vantagem = [manager verificarVantagemDaGasolina:3.5 EAlcool:1.5];
+    XCTAssertEqual(ALCOOL, vantagem);
+}
+
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-
+#import "CombustivesEnum.h"
 @interface PostimUITests : XCTestCase
 
 @end
@@ -32,9 +32,42 @@
     [super tearDown];
 }
 
-- (void)testExample {
-    // Use recording to get started writing UI tests.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+- (void)testParaAlcool {
+    
+    
+    XCUIApplication *app = [[XCUIApplication alloc] init];
+    
+    XCUIElement *alcoolTextField = app/*@START_MENU_TOKEN@*/.textFields[@"precoAlcool"]/*[[".textFields[@\"1.99\"]",".textFields[@\"precoAlcool\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/;
+    [alcoolTextField tap];
+    [alcoolTextField typeText:@"1.50"];
+    
+    XCUIElement *gasolinaTextField = app/*@START_MENU_TOKEN@*/.textFields[@"precoGasolina"]/*[[".textFields[@\"2.99\"]",".textFields[@\"precoGasolina\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/;
+    [gasolinaTextField tap];
+    [gasolinaTextField typeText:@"3.99"];
+    
+    [app.buttons[@"calcularBtn"] tap];
+    
+    BOOL resultado = [app.staticTexts[@"Alcool é o melhor"] exists];
+    XCTAssertEqual(YES, resultado);
+}
+
+- (void)testParaGasolina {
+    
+    
+    XCUIApplication *app = [[XCUIApplication alloc] init];
+    
+    XCUIElement *alcoolTextField = app/*@START_MENU_TOKEN@*/.textFields[@"precoAlcool"]/*[[".textFields[@\"1.99\"]",".textFields[@\"precoAlcool\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/;
+    [alcoolTextField tap];
+    [alcoolTextField typeText:@"4.50"];
+    
+    XCUIElement *gasolinaTextField = app/*@START_MENU_TOKEN@*/.textFields[@"precoGasolina"]/*[[".textFields[@\"2.99\"]",".textFields[@\"precoGasolina\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/;
+    [gasolinaTextField tap];
+    [gasolinaTextField typeText:@"2.99"];
+    
+    [app.buttons[@"calcularBtn"] tap];
+    
+    BOOL resultado = [app.staticTexts[@"Gasolina é o melhor"] exists];
+    XCTAssertEqual(YES, resultado);
 }
 
 @end

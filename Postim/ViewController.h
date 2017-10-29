@@ -7,9 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CombustivesEnum.h"
+#import "PostimManager.h"
 
 @interface ViewController : UIViewController
 
+@property PostimManager *postimManager;
+
+@property (weak, nonatomic) IBOutlet UITextField *precoAlcoolTxField;
+@property (weak, nonatomic) IBOutlet UITextField *precoGasolinaTxField;
+- (IBAction)calcularPreco:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *resultadoLabel;
+-(BOOL) calculoDaGasolina:(double)valorGasolina ComAlcool:(double)valorAlcool;
 
 @end
 

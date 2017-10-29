@@ -15,6 +15,9 @@
 		187BD1681FA52CD3009174E1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 187BD1671FA52CD3009174E1 /* main.m */; };
 		187BD1721FA52CD3009174E1 /* PostimTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 187BD1711FA52CD3009174E1 /* PostimTests.m */; };
 		187BD17D1FA52CD3009174E1 /* PostimUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 187BD17C1FA52CD3009174E1 /* PostimUITests.m */; };
+		187BD18B1FA52D26009174E1 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 187BD18A1FA52D26009174E1 /* logo.png */; };
+		187BD1911FA5478E009174E1 /* PostimManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 187BD1901FA5478E009174E1 /* PostimManager.m */; };
+		187BD1941FA54900009174E1 /* CombustivesEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = 187BD1931FA54900009174E1 /* CombustivesEnum.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,11 @@
 		187BD1781FA52CD3009174E1 /* PostimUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PostimUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		187BD17C1FA52CD3009174E1 /* PostimUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostimUITests.m; sourceTree = "<group>"; };
 		187BD17E1FA52CD3009174E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		187BD18A1FA52D26009174E1 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		187BD18F1FA5478E009174E1 /* PostimManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostimManager.h; sourceTree = "<group>"; };
+		187BD1901FA5478E009174E1 /* PostimManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostimManager.m; sourceTree = "<group>"; };
+		187BD1921FA54900009174E1 /* CombustivesEnum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CombustivesEnum.h; sourceTree = "<group>"; };
+		187BD1931FA54900009174E1 /* CombustivesEnum.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CombustivesEnum.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +109,7 @@
 		187BD1571FA52CD3009174E1 /* Postim */ = {
 			isa = PBXGroup;
 			children = (
+				187BD18A1FA52D26009174E1 /* logo.png */,
 				187BD1581FA52CD3009174E1 /* AppDelegate.h */,
 				187BD1591FA52CD3009174E1 /* AppDelegate.m */,
 				187BD15B1FA52CD3009174E1 /* ViewController.h */,
@@ -110,6 +119,10 @@
 				187BD1631FA52CD3009174E1 /* LaunchScreen.storyboard */,
 				187BD1661FA52CD3009174E1 /* Info.plist */,
 				187BD1671FA52CD3009174E1 /* main.m */,
+				187BD18F1FA5478E009174E1 /* PostimManager.h */,
+				187BD1901FA5478E009174E1 /* PostimManager.m */,
+				187BD1921FA54900009174E1 /* CombustivesEnum.h */,
+				187BD1931FA54900009174E1 /* CombustivesEnum.m */,
 			);
 			path = Postim;
 			sourceTree = "<group>";
@@ -238,6 +251,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				187BD18B1FA52D26009174E1 /* logo.png in Resources */,
 				187BD1651FA52CD3009174E1 /* LaunchScreen.storyboard in Resources */,
 				187BD1621FA52CD3009174E1 /* Assets.xcassets in Resources */,
 				187BD1601FA52CD3009174E1 /* Main.storyboard in Resources */,
@@ -265,7 +279,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				187BD1941FA54900009174E1 /* CombustivesEnum.m in Sources */,
 				187BD15D1FA52CD3009174E1 /* ViewController.m in Sources */,
+				187BD1911FA5478E009174E1 /* PostimManager.m in Sources */,
 				187BD1681FA52CD3009174E1 /* main.m in Sources */,
 				187BD15A1FA52CD3009174E1 /* AppDelegate.m in Sources */,
 			);
